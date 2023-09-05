@@ -15,8 +15,8 @@
     <GMAKE_J>8</GMAKE_J>
     <BATCH_SYSTEM>slurm</BATCH_SYSTEM>
     <SUPPORTED_BY>phall1</SUPPORTED_BY>
-    <MAX_TASKS_PER_NODE>32</MAX_TASKS_PER_NODE>
-    <MAX_MPITASKS_PER_NODE>32</MAX_MPITASKS_PER_NODE>
+    <MAX_TASKS_PER_NODE>48</MAX_TASKS_PER_NODE>
+    <MAX_MPITASKS_PER_NODE>48</MAX_MPITASKS_PER_NODE>
     <mpirun mpilib="default">
       <executable>srun</executable>
       <arguments>
