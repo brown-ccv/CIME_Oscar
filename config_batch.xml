@@ -24,6 +24,7 @@
       <directive> --output={{ job_id }}   </directive>
       <directive> --exclusive             </directive>
       <directive> --mem=0                 </directive>     
+      <directive> --account=epscor-condo  </directive>
     </directives>
     <queues>
       <queue default="true">batch</queue>
