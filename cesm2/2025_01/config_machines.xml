@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+  <machine MACH="oscar">
+    <DESC>Oscar RHEL9.2, batch system is SLURM</DESC>
+    <NODENAME_REGEX>.*.oscar.ccv.brown.edu</NODENAME_REGEX>
+    <OS>LINUX</OS>
+    <COMPILERS>gnu</COMPILERS>
+    <MPILIBS>openmpi</MPILIBS>
+    <PROJECT>none</PROJECT>
+    <CIME_OUTPUT_ROOT>/sss/jobtmp/$USER/cesm</CIME_OUTPUT_ROOT>
+    <DIN_LOC_ROOT>/oscar/data/shared/cesm/input_data</DIN_LOC_ROOT>
+    <DIN_LOC_ROOT_CLMFORC>/oscar/data/shared/cesm/input_data/atm/datm7</DIN_LOC_ROOT_CLMFORC>
+    <DOUT_S_ROOT>/oscar/home/$USER/data/$USER/cesm/archive/$CASE</DOUT_S_ROOT>
+    <BASELINE_ROOT>/oscar/scratch/$USER/ccsm_baselines</BASELINE_ROOT>
+    <CCSM_CPRNC>/oscar/data/shared/cesm/tools/bin/cprnc</CCSM_CPRNC>
+    <GMAKE>make</GMAKE>
+    <GMAKE_J>8</GMAKE_J>
+    <BATCH_SYSTEM>slurm</BATCH_SYSTEM>
+    <SUPPORTED_BY>phall1</SUPPORTED_BY>
+    <MAX_TASKS_PER_NODE>32</MAX_TASKS_PER_NODE>
+    <MAX_MPITASKS_PER_NODE>32</MAX_MPITASKS_PER_NODE>
+    <PROJECT_REQUIRED>FALSE</PROJECT_REQUIRED>
+    <mpirun mpilib="default">
+      <executable>srun</executable>
+      <arguments>
+        <arg name="pmi">--mpi=pmix</arg>
+      </arguments>
+    </mpirun>
+    <module_system type="none"/>
+    <environment_variables>
+      <env name="OMP_STACKSIZE">1024M</env>
+      <env name="NETCDF_PATH">/oscar/rt/9.2/software/0.20-generic/0.20.1/opt/spack/linux-rhel9-x86_64_v3/gcc-11.3.1/netcdf-4.9.2-og6h2kmkwtfji6g23wigvi7nbzezgef4</env>
+    </environment_variables>
+  </machine>
+
+

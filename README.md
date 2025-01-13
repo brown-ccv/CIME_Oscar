@@ -1,4 +1,4 @@
-## Machine-specific XML files for running CESM2 on Oscar
+## Machine-specific XML files for running CESM on Oscar
 
 These are files to place in ~/.cime if you want to install your own
 version of CESM2 on Oscar.  
@@ -11,5 +11,7 @@ version of CESM2 on Oscar.
 To use this repository to create your own ~/.cime directory
 ````
 cd ~
-git clone https://github.com/brown-ccv/CIME_Oscar .cime
+git clone https://github.com/brown-ccv/CIME_Oscar
+mkdir ~/.cime
+cp CIME_OSCAR/<cesm_version>/<date>/* ~/.cime
 ````
